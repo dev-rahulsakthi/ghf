@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Categories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🔻 FIXED HEADER -->
+  <header>
+    <div class="container header-container">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="Logo" class="site-logo" />
+        <h1 class="brand-name" >Golden Healthy Foods 🥗</h1>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#hero">🏠 Home</a></li>
+          <li><a href="#about">👨‍🍳 About Us</a></li>
+          <li><a href="#recipes-app">📖 Recipes</a></li>
+          <li><a href="#contact">📞 Contact Us</a></li>
+        </ul>
+        <!-- Mobile menu icon -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- 🔻 MAIN CONTENT SECTION (Scrollable) -->
+  <div class="content-wrapper">
+    
+
+ <section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>🥗 Welcome to Golden Healthy Foods 🥗</h1>
+    <p>🍽️ Eat well, live better 🍽️</p>
+  </div>
+ </section>
+
+<div class="scroll-wrapper" id="scrollWrapper">
+  <div class="scroll-content" id="scrollContent">
+    <div class="image-set" id="imageSet">
+     <a href="image-details.html?img=food1.jpg&title=Food 1&desc=This is a delicious dish">      
+      <img src="images/food1.jpg" alt="Food 1" /></a>
+     <a href="image-details.html?img=food2.jpg&title=Food 2&desc=This is a yummy dish">           
+      <img src="images/food2.jpg" alt="Food 2" /></a>
+     <a href="image-details.html?img=food3.jpg&title=Food 3&desc=This is a crishpy dish">      
+      <img src="images/food3.jpg" alt="Food 3" /></a>
+     <a href="image-details.html?img=food4.jpg&title=Food 4&desc=This is a seedless dish">            
+      <img src="images/food4.jpg" alt="Food 4" /></a>
+     <a href="image-details.html?img=food5.jpg&title=Food 5&desc=This is a smootheies dish">            
+      <img src="images/food5.jpg" alt="Food 5" /></a>
+      <!-- Add more images as needed -->
+    </div>
+
+    <!-- Duplicate for seamless loop -->
+    <div class="image-set">
+      <a href="image-details.html?img=food1.jpg&title=Food 1&desc=This is a delicious dish">      
+      <img src="images/food1.jpg" alt="Food 1" /></a>
+     <a href="image-details.html?img=food2.jpg&title=Food 2&desc=This is a yummy dish">           
+      <img src="images/food2.jpg" alt="Food 2" /></a>
+     <a href="image-details.html?img=food3.jpg&title=Food 3&desc=This is a crishpy dish">      
+      <img src="images/food3.jpg" alt="Food 3" /></a>
+     <a href="image-details.html?img=food4.jpg&title=Food 4&desc=This is a seedless dish">            
+      <img src="images/food4.jpg" alt="Food 4" /></a>
+     <a href="image-details.html?img=food5.jpg&title=Food 5&desc=This is a smootheies dish">            
+      <img src="images/food5.jpg" alt="Food 5" /></a>
+    </div>
+  </div>
+</div>
+<!-- 🔻 ABOUT US SECTION -->  
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Welcome to Golden Healthy Foods! We are a passionate group of food enthusiasts
+        dedicated to providing easy, nutritious, and delicious recipes that
+        everyone can enjoy. Our mission is to make healthy eating accessible
+        to all by offering a variety of recipes that cater to different diets and preferences.
+      </p>
+      <p>
+        Our collection includes everything from plant-based meals to protein-packed
+        snacks and refreshing drinks. Join us on our journey to promote better
+        living through wholesome food!
+      </p>
+    </div>
+  </section>
+
+
+ <!-- 🔻 MAIN RECIPE SECTION -->
+<section id="recipes-app">
+  <div class="container">
+    <h2>🍴 Recipes</h2>
+
+    <div class="app-layout">
+      <!-- LEFT SIDE: Category + Recipe List -->
+      <div class="sidebar">
+        <div class="categories">
+          <button onclick="showCategory('foods')">🥘 Foods</button>
+          <button onclick="showCategory('snacks')">🥪 Snacks</button>
+          <button onclick="showCategory('drinks')">🥤 Drinks</button>
+        </div>
+
+        <div class="recipe-list" id="recipeList">
+          <!-- Dynamic recipes will appear here -->
+        </div>
+   <!-- Pagination -->
+        <div class="pagination" id="pagination">
+          <!-- Pagination controls will be here -->
+        </div>
+        </div>
+
+     
+      <!-- RIGHT SIDE: Recipe Details -->
+      <div class="recipe-details" id="recipeDetails">
+        <p id="recipe-details-text">Select a recipe to see details</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 🔻 CONTACT US SECTION -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or feedback, feel free to reach out to us:</p>
+      <p>Email: <a href="mailto:ponnan21@gmail.com">contact@goldenhealthyfoods.com</a></p>
+      <p>Phone: +91 9994477380</p>
+      <p>Address: 5/364, Karkkuvel Ayyanar Kovil St, Krishnapruam, Rajapalayam (TK), Virudhunagar (Dist), Pincode: 626142</p>
+    </div>
+  </section>
+ </div>
+
+  <!-- 🔻 FIXED FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Golden Healthy Foods. All rights reserved.</p>
+	<p></p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+
+<script>
+  const wrapper = document.getElementById("scrollWrapper");
+  const content = document.getElementById("scrollContent");
+
+  let scrollY = 0;
+  const speed = 1;
+
+  function autoScroll() {
+    scrollY += speed;
+    wrapper.scrollTop = scrollY;
+
+    // Reset scroll to top when halfway (because content is duplicated)
+    if (scrollY >= content.scrollHeight / 2) {
+      scrollY = 0;
+    }
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  // Start scrolling
+  autoScroll();
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .detail-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      padding-top: 10px;
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-content {
+      flex: 1;
+      min-width: 500px;
+      min-height: 800px;
+    }
+
+    .image-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 60px 0 20px 0;
+      color: #4caf50;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .detail-wrapper {
+        flex-direction: column;
+      }
+
+      .text-content, .image-content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔻 FIXED HEADER -->
+  <header>
+    <div class="container header-container">
+     <div class="logo-title">
+     <img src="images/logo.png" alt="Logo" class="site-logo" />      
+     <h1>Golden Healthy Foods 🥗</h1>
+     </div>
+    </div>
+  </header>
+
+<div class="container">
+    <div style="height: 10px;"></div> <!-- 👈 This pushes the Home button down -->      
+    <a href="index.html" class="back-link">← Home</a>
+    <div class="detail-wrapper" id="imageContainer">
+      <!-- JavaScript will fill this -->
+    </div>
+  </div>
+
+  
+<!-- 🔻 FIXED FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Golden Healthy Foods. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const img = urlParams.get('img');
+    const title = urlParams.get('title');
+    const desc = urlParams.get('desc');
+
+    const container = document.getElementById('imageContainer');
+
+    if (img && title && desc) {
+      container.innerHTML = `
+        <div class="text-content">
+          <h2>${title}</h2>
+          <p style="font-size: 18px;">${desc}</p>
+        </div>
+        <div class="image-content">
+          <img src="images/${img}" alt="${title}">
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<p>Invalid image data. <a href="index.html">Go back home.</a></p>`;
+    }
+  </script>
+</body>
+</html>
