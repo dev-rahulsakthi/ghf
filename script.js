@@ -36,9 +36,16 @@ let currentPage = 1;  // Default page
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.querySelector(".menu");
 
-// Add event listener to the menu toggle (hamburger icon)
+// Toggle menu on icon click
 menuToggle.addEventListener("click", () => {
   menu.classList.toggle("active");
+});
+
+// Auto-close menu on link click (mobile UX improvement)
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 });
 
 // Function to display recipes for the selected category
