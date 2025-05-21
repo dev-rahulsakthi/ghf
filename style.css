@@ -71,7 +71,7 @@ body {
   }
 
   .hero-content {
-    padding: 20px;
+    margin: 30px;
     height: 350px;
   }
 
@@ -81,7 +81,7 @@ body {
 
   .hero p {
     padding-top: 30px;
-    font-size: 24px;
+    font-size: large;
   }
 }
 
@@ -99,7 +99,7 @@ body {
 
 .hero-content {
   background-color: rgba(0, 0, 0, 0.4);
-  margin: 30px;
+  padding: 30px;
   border-radius: 10px;
 }
 
